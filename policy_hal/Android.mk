@@ -16,6 +16,8 @@ ifeq ($(USE_CUSTOM_AUDIO_POLICY), 1)
 LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
 
+LOCAL_CFLAGS += -Wno-error
+
 LOCAL_SRC_FILES := AudioPolicyManager.cpp
 
 LOCAL_C_INCLUDES := $(TOPDIR)frameworks/av/services \
